@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NICKELECTRONICS WIFI</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-self: center;
+            background-image: url(bck1.jpg);
+            background-position: 50% 0px;
+            min-height: 100vh!important;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding-bottom: 20px;
+            
+
+        }
+        .payment{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            text-align: center;
+            width: 600px;
+        }
+        .row1{
+            display: flex;
+            flex-direction: row;
+            width: 70%;
+            align-self: center;
+            justify-content: center;
+
+        } 
+        .row2{
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            width: 95%;
+            align-self: center;
+
+        }
+        .pay1,.pay2,.pay3, .pay4,.pay5,.pay6,.pay7{
+        
+            border-radius: 50%;
+            width: 106px;
+            height:104px;
+            font-size: 15px;
+            background-color: white;
+            border-color: rgb(212, 0, 255);
+            align-self: center;
+            
+
+        }
+        label{
+            font-size: 12px;
+        
+        }
+        .pay1,.pay2{
+            border-color: rgb(0, 132, 255);          
+
+        }
+        .pay3,.pay4,.pay6{
+            border-color: rgba(234, 238, 8, 0.973);
+        }
+    .label{
+        text-align: center;
+        font-size: 32px;
+        color: rgb(10, 248, 10);
+        width: 500px;
+        align-self: center;
+        column-gap: 0px;
+    }
+    h1{
+        font-style: italic;
+        background-color: rgba(196, 193, 193, 0.103);
+        width: 380px;
+        align-self: center;
+        border-radius: 10px;
+        font-size: 20px;
+        color: white;
+        
+    }
+    .p1{
+        background-color: rgba(196, 193, 193, 0.103);
+        width: 500px;
+        align-self: center;
+        height: 80px;
+        align-content: center;
+        font-size: 24px;
+        border-radius: 10px;
+        color: white;
+
+    }
+    .reconnect{
+        background-color: rgba(196, 193, 193, 0.103);
+    
+        font-size: 10px;
+        flex-direction: column;
+        display: flex;
+        padding-bottom: 20px;
+        border-radius: 10px;
+        align-self: center;
+        margin-top: 30px;
+        width: 500px;
+        color: white;
+        outline: 0;
+    
+    }
+    input{
+        width: 600px;
+        height: 30px;
+        align-self: center;
+        font-size: 15px;
+        border-radius: 5px;
+        width: 77%;
+        outline: 0;
+    }
+    button{
+        width:380px ;
+        align-self: center;
+        margin-top: 20px;
+        height: 30px;
+        font-size:17px ;
+        border-radius: 5px;
+        width: 50%;
+        
+    }
+    .p2{
+        font-size: 15px;
+        padding-top: 20px;
+    }
+    .p3{
+        font-size:20px;
+    }
+    .voucher{
+        color: white;
+        background-color: rgba(196, 193, 193, 0.103);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 30px;
+        border-radius: 10px;
+        flex-direction: column;
+        display: flex;
+        align-self: center;
+        width: 500px;
+    }
+    .h1{
+        align-self: center;
+        margin: auto;
+        
+        
+    }
+    .login{
+        color: white;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 30px;
+        background-color: rgba(196, 193, 193, 0.103);
+
+        padding-bottom: 20px;
+        border-radius: 10px;
+        flex-direction: column;
+        display: flex;
+        align-self: center;
+        width: 500px;
+    }
+    .input3{
+        margin-top: 10px;
+    }
+    .h3{
+        color: rgb(47, 241, 47);
+        font-size: 15px;
+        font-weight: bold;
+        
+    }
+    .p4{
+        color: red;
+        font-weight: bold;
+        font-size: 18px;
+        padding-top: 20px;
+    }
+    
+    .btn1{
+        background-color: rgb(18, 223, 223);
+        outline: 0;
+        border: 0;
+        }
+        .input1{
+            border-color: red;
+            border-bottom: rgb(201, 165, 165);
+
+        }
+        .input2{
+            border-color: blueviolet;
+            border-bottom: white;
+        }
+        .input3,.input4{
+            border-color: aqua;
+            border-bottom: white;
+           
+        }
+        .input4{
+            margin-top: 20px;
+        }
+        .reconnectbtn{
+            
+        }
+        .popup, .processing{
+            background-color: white;
+            width: 80%;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: auto;
+            align-content: center;
+            border-radius: 10px;
+            visibility: hidden;
+            transform: translate(-50%, -50%);
+        }
+        .procesing{
+            height: 300px;
+            font-size: 30px;
+
+        
+        }
+        .open-popup{
+            visibility: visible;
+            transform: translate(-50%, -50%);
+        }
+        .open-processing{
+            visibility: visible;
+            transform: translate(-50%, -50%);
+        }
+        .pay{
+            background-color: rgb(45, 130, 241);
+            width: 40%;
+        }
+        .process{
+            font-size: 40px;
+            align-items: center;
+        }
+        img{
+            width: 20px;
+            visibility: hidden;
+        }
+        .open-img{
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+      <h1>PIXELS ELECTRONICS WIFI LOGIN</h1>
+      <P class="p1">(CUSTOMER CARE:0794541860 OR 0708581662)</P>
+      <label class="label">Tap one circle below and enter phone number to pay</label>
+      <div class="payment">
+        <div class="row1">
+             <button onclick="pay1()" class="pay1">
+                 <label class="h3">2Hours</label>
+                 <label class="p4">KSH:10/-</label><br>
+                 <label>MAX 3mbps</label>
+             </button>
+             <button onclick="pay2()" class="pay2">
+                 <label class="h3">12Hours</label>
+                 <label class="p4">KSH:20/-</label><br>
+                 <label>MAX 3mbps</label>
+             </button>
+             <button onclick="pay3()" class="pay3">
+                 <label class="h3">24Hours</label>
+                 <label class="p4">KSH:30/-</label><br>
+                 <label>MAX 3mbps</label>
+             </button>
+ 
+        </div> 
+        <div class="row2">
+             <button onclick="pay4()" class="pay4">
+                 <label class="h3">24Hours</label><br>
+                 <label class="p4">KSH:100/-</label><br>
+                 <label>MAX 5mbps</label>
+             </button>
+             <button onclick="pay5()" class="pay5">
+                 <label class="h3">7days</label>
+                 <label class="p4">KSH:200/-</label><br>
+                 <label>MAX 3mbps</label>
+             </button>
+         
+             <button onclick="pay6()" class="pay6">
+                 <label class="h3">1 month</label>
+                 <label class="p4">KSH:600/-</label><br>
+                 <label>MAX 3mbps</label>
+             </button>
+             <button onclick="pay7()" class="pay7">
+                 <label class="h3">1 month</label>
+                 <label  class="p4">KSH:1000/-</label><br>
+                 <label>MAX 5mbps</label>
+             </button>
+         </div> 
+            
+     </div>
+
+
+
+    
+    <div class="reconnect">
+        <label class="p2">Reconnect account</label>
+        <p class="p3">(Enter mpesa code below from the payment you made eg:QAH9QWWZRR)</p>
+        <input class="input1" type="text" name="" id="input1" placeholder="Enter Mpesa Code you paid with">
+        <button class="reconnectbtn" onclick="Reconnect()">Reconnect</button>
+    </div>
+    <div class="voucher">
+        <label class="p2">Voucher recharge</label>
+        <p class="p3">(Call admni for voucher recharge incase your payment is not successfull)</p>
+        <input class="input2" type="text" id="input2" placeholder="Enter voucher code">
+        <button class="voucherbtn" onclick="voucher()">Activate voucher</button>
+    </div>
+    <div class="login">
+        <h1 class="h1">PIXELS ELECTRONICS WIFI LOGIN</h1>
+        <P class="p3">(Enter your username plus password to login.)</P>
+        <input class="input3" type="text" id="username" placeholder="Username">
+        <input class="input4" type="password" placeholder="Password" id="password">
+        <button class="btn1" onclick="login()">LOGIN</button>
+    </div>    
+    
+    <div id="popup" class="popup">
+        <h2>Make payment</h2>
+        <p id="paymessage"></p>
+        <input id="phonenumber" type="number">
+        <p id="alert1"></p>
+        <button onclick="paynow()" class="pay">Pay now</button>
+    </div>
+    <div id="processing" class="processing">
+        <p class="process">Please wait...</p>
+        <p>Kindly wait as we try to validate your transaction and connect you, this may take up to a minute ,ensure you have ENTER the pin and confirmed the payment on your phone</p>
+
+    </div>
+</div>  
+<script>
+      const popup=document.getElementById("popup");
+      const paymessage=document.getElementById("paymessage");
+      const  phonenumber=document.getElementById("phonenumber");
+      const alert1=document.getElementById("alert1");
+      const processing=document.getElementById("processing");
+    
+      var amount;
+
+       function pay1(){
+         let amount=10;
+        popup.classList.add("open-popup");
+        paymessage.textContent=(`You are about to pay KSH. ${amount} for 2 Hours plan. Enter phonenumber below and click PAY NOW`)
+       } 
+       function pay2(){
+        let amount=20
+        let time=12
+        
+        paymessage.textContent=(`You are about to pay KSH. ${amount} for ${time} Hours plan. Enter phonenumber below and click PAY NOW`)
+        popup.classList.add("open-popup");
+       } 
+       function pay3(){
+        let amount=30;
+        let time=12*2
+        
+        paymessage.textContent=(`You are about to pay KSH. ${amount} for ${time} Hours plan. Enter phonenumber below and click PAY NOW`)
+        popup.classList.add("open-popup");
+       } 
+       function pay4(){
+        let amount=100
+        let time=24
+        
+        paymessage.textContent=(`You are about to pay KSH. ${amount} for ${time} Hours plan. Enter phonenumber below and click PAY NOW`)
+        popup.classList.add("open-popup");
+       } 
+       function pay5(){
+        let amount=200
+        let time=7
+        
+        paymessage.textContent=(`You are about to pay KSH. ${amount} for ${time} Days plan. Enter phonenumber below and click PAY NOW`)
+        popup.classList.add("open-popup");
+       } 
+       function pay6(){
+        let amount=600
+        let time=1
+        
+        paymessage.textContent=(`You are about to pay KSH. ${amount} for ${time} Month plan. Enter phonenumber below and click PAY NOW`)
+        popup.classList.add("open-popup");
+       } 
+       function pay7(){
+        let amount=1000
+        let time=1
+        
+        paymessage.textContent=(`You are about to pay KSH. ${amount} for ${time} Month plan. Enter phonenumber below and click PAY NOW`)
+        popup.classList.add("open-popup");
+       } 
+       function paynow(){
+        let phone=phonenumber.value;
+    
+        if(phone==""){
+        alert1.textContent=("❗❗❗  You need to write your phonumber")
+        phonenumber.style.border.color="red";
+    
+        }
+        else {
+        
+           popup.classList.remove("open-popup");
+            processing.classList.add("open-processing")
+        }
+       } 
+
+</script>
+</body>
+</html>
