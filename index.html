@@ -12,6 +12,8 @@
   /* Styles for screens larger than 769px */
 }
 
+        
+
         .container{
             display: flex;
             flex-direction: column;
@@ -270,6 +272,33 @@
         .open-img{
             visibility: visible;
         }
+
+        
+        .loader{
+        border: solid;
+        border-color: rgb(0, 128, 0);
+        border-width: 10px;
+        height: 50px;
+        width: 50px;
+        border-top-color: red;
+        border-radius: 50%;        
+        margin: auto;
+        margin-top: 5%;
+        animation: spin 1s linear infinite;
+        visibility: hidden;
+        align-self: center;
+        justify-content: center;
+        text-align: center;
+
+        }
+        .open-loader{
+            visibility: visible;
+        }
+       
+        @keyframes spin{
+            0%{transform: rotate(0deg);}
+            100%{transform: rotate(360deg);;}
+        }
     </style>
 </head>
 <body>
@@ -364,6 +393,7 @@
       const  phonenumber=document.getElementById("phonenumber");
       const alert1=document.getElementById("alert1");
       const processing=document.getElementById("processing");
+      const loader=document.getElementById("loader");
     
       var amount;
 
@@ -417,15 +447,24 @@
        function paynow(){
         let phone=phonenumber.value;
     
-        if(phone==""){
-        alert1.textContent=("❗❗❗  You need to write your phonumber")
+          if(phone==""){
+        alert1.textContent=("❗❗❗  You need to write your phonenumber")
         phonenumber.style.border.color="red";
+        loader.classList.remove("open-loader");
     
         }
         else {
         
            popup.classList.remove("open-popup");
             processing.classList.add("open-processing")
+            loader.classList.add("open-loader")
+            setTimeout(function() {
+        loader.classList.add('open-loader');
+        loader.classList.remove('open-loader');
+        setTimeout(() => {
+            processing.classList.remove('open-processing');
+        }, 50);
+        }, 5000);
         }
        } 
 
