@@ -299,6 +299,17 @@
             0%{transform: rotate(0deg);}
             100%{transform: rotate(360deg);;}
         }
+        .close{
+            cursor: pointer;
+            position: absolute;
+            right: 15px;
+            background-color: black;
+            top: 2px;
+            width: 50px;
+            justify-content: center;
+            text-align: center;
+
+        }
     </style>
 </head>
 <body>
@@ -375,6 +386,7 @@
     </div>    
     
     <div id="popup" class="popup">
+        <button class="close" onclick="close1()">❌</button>
         <h2>Make payment</h2>
         <p id="paymessage"></p>
         <input id="phonenumber" type="number">
@@ -468,6 +480,9 @@
         }, 5000);
         }
        } 
+        function close1(){
+        popup.classList.remove("open-popup");
+       }
 
 </script>
 </body>
